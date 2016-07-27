@@ -1,0 +1,14 @@
+{
+  "name": "sistema_angular",
+  "version": "1.0.0",
+  "description": "sistema angularJS com php",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sistema123"
+  ],
+  "author": "Cassiano de Souza",
+  "license": "ISC"
+}

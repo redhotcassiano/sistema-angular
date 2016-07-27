@@ -1,0 +1,56 @@
+<div class="jumbotron">
+  <div class="container">
+   		<div class="row">
+   			<div class="col-md-12 col-sm-12">
+   				<input type="text" class="form-control" ng-model="busca" name="busca" placeholder="Pesquisa..."/></br>
+	    		
+	    		<a href="#/novo_admin" class="btn btn-primary"> Novo Usuário </a>
+	    		<table class="table table-striped mdl-shadow--4dp" ng-show="admins.length > 0">
+				  <thead>
+				    <tr>
+				      <th></th>
+				      <th class="text-center"><a href="" ng-click="odenarPor('id')">ID</a></th> 
+				      <th class="text-center"><a href="" ng-click="odenarPor('nome')">NOME</a></th>
+				      <th class="text-center"><a href="" ng-click="odenarPor('email')">EMAIL</a></th>
+				      <th class="text-center">TELEFONE</th>
+				      <th class="text-center">CIDADE</th>
+				      <th class="text-center">ESTADO</th>
+				      <th class="text-center">NIVEL</th>
+				      <th class="text-center">STATUS</th>
+				      <th class="text-center">OPÇÕES</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr ng-class="{selecionado: admin.selecionado}" ng-repeat="admin in admins | filter: busca | orderBy: criterioDeOrdenacao: direcaoDaOrdenacao">
+				      <td>
+
+				      		<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+  								<input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" ng-model="admin.selecionado" >  
+							</label>
+				      </td>
+				      <td>{{admin.id}}</td>			    
+				      <td><a href="#/view_admin/{{admin.id}}">{{admin.nome | name}}</a></td>
+				      <td>{{admin.email}}</td>
+				      <td>{{admin.telefone}}</td>
+				      <td>Cabo S. Agostinho</td>
+				      <td>{{admin.estado.uf}}</td>
+				      <td>Administrador</td>
+				      <td>Ativo</td>
+				      <td>
+				      	<a href="#/update_admin/{{admin.id}}" class="btn btn-primary mdl-js-ripple-effect mdl-button--colored">
+		  					Alterar
+						</a>						
+			<a href="" ng-click="apagarAdmin(admin.id)"  ng-show="isAdminSelecionado(admins)" class="btn btn-danger">
+				Deletar
+			</a>					
+				      </td>
+
+				    </tr>			    	    
+				  </tbody>
+				</table>
+				
+   			</div><!-- fim md sm -->
+   		</div><!-- fim row -->
+   		
+  </div>
+</div>

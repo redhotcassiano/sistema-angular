@@ -1,0 +1,26 @@
+{
+  "name": "sistema_angular",
+  "description": "sistema angularJS com php",
+  "main": "index.html",
+  "authors": [
+    "Cassiano de Souza"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "sistema123"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "material-design-lite": "^1.1.3",
+    "bootstrap": "^3.3.6"
+  }
+}

@@ -1,0 +1,45 @@
+<div class="jumbotron">
+  <div class="container">
+   		{{adminView.nome}}
+	<div class="row">
+   			<div class="col-md-12 col-sm-12">
+   				
+   				<div class="form_add_admin">				
+			    	
+			    								
+						
+						 <div class="alert alert-danger" ng-show="formAdmin.nome.$error.required && formAdmin.nome.$dirty">Preencha o Campo Nome!
+						 </div>
+
+						 <div class="alert alert-danger" ng-show="formAdmin.nome.$error.minlength">Preecha o mínimo de Caracteres no campo Nome que é 5!
+						 </div>
+
+						  <div class="alert alert-danger" ng-show="formAdmin.email.$invalid && formAdmin.email.$dirty">Preencha o Campo Email!
+						  </div>
+
+			    		  <form action="#" name="formAdmin">
+			    		  	  
+							  <div class="form-group">							   
+							    <input type="text" ng-model="admin.nome" name="nome" id="nome" class="form-control" ng-required="true" ng-minlength="5" value="{{adminView.nome}}" placeholder="NOME...">
+							  </div>
+							   <div class="form-group">							   
+							    <input type="email" ng-model="admin.email" name="email" id="nome" class="form-control" ng-required="true"  placeholder="E-MAIL..." value="{{adminView.email}}">
+							  </div>
+							   <div class="form-group">							   
+							    <input type="text" ng-model="admin.telefone" name="telefone" id="nome" class="form-control" ng-required="true" ng-minlength="5"  placeholder="TELEFONE..." ui-phone value="{{adminView.telefone}}">
+							  </div>
+							   
+				    		  
+							  <select style="width: 200px;" class="form-control" name="estados" id="estados" ng-model="admin.estado" ng-options="estado.nome group by estado.regiao for estado in estados | orderBy:'nome'">
+							  	<option value="">Selecione Um Estado</option>
+							  </select>
+							  </br>
+						  </form>
+						  <button ng-click="adicinarContato(admin)" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" ng-disabled="formAdmin.$invalid">
+							  	Salvar
+						  </button>
+
+				</div><!-- Fim Form Add Admin -->
+				<a href="#/admin">Voltar</a>
+   			</div>
+   		</div>

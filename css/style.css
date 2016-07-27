@@ -1,0 +1,32 @@
+.selecionado{
+			background-color: red;
+			};
+
+.ui-alert-top{
+	background-color: red;
+	width: 750px;
+	margin: 0 auto;
+	height: 20px;	
+}
+
+.ui-alert-title{
+	font-size: 20px;
+	font-weight: bold;
+	background-color: red;
+	height: 60px;
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+	color: blue;
+}
+
+.ui-alert-message{
+	font-size: 18px;
+	font-weight: bold;
+	background-color: red;
+	height: 30px;
+	width: 750px;
+	margin: 0 auto;
+	text-align: center;
+	color: blue;
+}

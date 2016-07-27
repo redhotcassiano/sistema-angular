@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Pagination</title>
+    <script src="libs/angularjs/angular.min.js"></script>
+    <script src="js/pagination.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app="app">
+    <main>
+        <section id="content" ng-controller="PaginationCtrl">
+            <h3>Paginação</h3>
+            <hr>
+            <ul>
+                <li ng-repeat="item in paginate.result.data">
+                    {{item.id}} - {{item.name}}
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <a href="" ng-click="paginate.prev()"><span aria-hidden="true">Anterior</span></a>
+                </li>
+                <li>
+                    <a href="" ng-click="paginate.next()"><span aria-hidden="true">Próximo</span></a>
+                </li>
+            </ul>
+
+            <p>Mostrando registros de {{paginate.result.from}} até {{paginate.result.to}} de um total de {{paginate.total}}</p>
+        </section>
+    </main>
+
+</body>
+</html>
